@@ -11,7 +11,12 @@ int main() {
 
 	// se citeste memoria
 	Memory memory;
+	Brain brain;
+	brain.init(memory);
+	//brain.print();
 	
+	//brain.request(std::string("second"));
+	cout << "DA";
 	return 0;
 }
 

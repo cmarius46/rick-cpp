@@ -6,15 +6,15 @@ using namespace std;
 
 Neuron::Neuron() {
 	this->pos = -1;
-	this->data = vector<string>();
+	this->data = string();
 }
 
-Neuron::Neuron(int p, vector<string> v) {
+Neuron::Neuron(int p, string dat) {
 	// fiecarui neuron ii este atribuita o pozitie si sunt
 	// recapatate datele din memorie
 
 	this->pos = p;
-	this->data = v;
+	this->data = dat;
 }
 
 void Neuron::addPrev(int pos, Neuron *pn) {
@@ -61,7 +61,7 @@ void Neuron::send() {
 
 // bool send(old) returns true if sent the message to at least another neuron
 
-void Neuron::receive(vector<string> v) {
+void Neuron::receive(string v) {
 	this->data = v;
 	cout << "received" << '\n';
 }
@@ -71,9 +71,10 @@ void Neuron::receive(vector<string> v) {
 void Neuron::print() {
 	// debugs the data of the neuron
 
-	cout << pos << " ";
-	for(auto word : data) {
-		cout << word << " ";
-	}
+	cout << this->pos << " ";
+	cout << this->data << " ";
+	// for(auto word : data) {
+	// 	cout << word << " ";
+	// }
 	cout << "\n\n";
 }

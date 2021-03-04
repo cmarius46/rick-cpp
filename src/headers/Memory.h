@@ -6,7 +6,7 @@
 struct Memory {
 
 	int size;
-	std::unordered_map<int, std::vector<std::string>> mem; // pozitia (id-ul) neuronului, 
+	std::unordered_map<int, std::string> mem; // pozitia (id-ul) neuronului, 
 	// respectiv datele acestuia
 
 	Memory();
